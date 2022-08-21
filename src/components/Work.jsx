@@ -24,15 +24,15 @@ const Work = () => {
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-2xl font-bold text-white tracking-wider'>
-                React JS Application
+                CD3Fi
               </span>
               <div className='pt-8 text-center'>
-                <a href='/'>
+                <a href='http://18.117.155.165:3000/'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
                 </a>
-                <a href='/'>
+                <a href='https://github.com/pratikshitvas/cd3fi'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
                   </button>
@@ -47,15 +47,15 @@ const Work = () => {
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-2xl font-bold text-white tracking-wider'>
-                React JS Application
+                Netflix-Clone
               </span>
               <div className='pt-8 text-center'>
-                <a href='/'>
+                <a href='https://netflix-clone-pratikshit.netlify.app'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
                 </a>
-                <a href='/'>
+                <a href='https://github.com/pratikshitvas/Project_NET'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
                   </button>
@@ -71,15 +71,15 @@ const Work = () => {
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-2xl font-bold text-white tracking-wider'>
-                React JS Application
+                Portfolio
               </span>
               <div className='pt-8 text-center'>
-                <a href='/'>
+                <a href='https://pratikshit-vashistha.netlify.app/'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
                 </a>
-                <a href='/'>
+                <a href='https://github.com/pratikshitvas/Portfolio_website'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
                   </button>
@@ -94,15 +94,15 @@ const Work = () => {
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-2xl font-bold text-white tracking-wider'>
-                React JS Application
+                Landing Page
               </span>
               <div className='pt-8 text-center'>
-                <a href='/'>
+                <a href='https://landing-page-pv.netlify.app/'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
                 </a>
-                <a href='/'>
+                <a href='https://github.com/pratikshitvas/jtg'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
                   </button>
@@ -118,15 +118,15 @@ const Work = () => {
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-2xl font-bold text-white tracking-wider'>
-                React JS Application
+                Research Paper
               </span>
               <div className='pt-8 text-center'>
-                <a href='/'>
+                <a href=''>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Demo
+                    Paper
                   </button>
                 </a>
-                <a href='/'>
+                <a href=''>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
                   </button>
@@ -141,15 +141,15 @@ const Work = () => {
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-2xl font-bold text-white tracking-wider'>
-                React JS Application
+                SO Tag Prediction
               </span>
               <div className='pt-8 text-center'>
-                <a href='/'>
+                <a href='https://github.com/pratikshitvas/SO-tag-prediction/blob/main/technolabs_tag_prediction.ipynb'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
                 </a>
-                <a href='/'>
+                <a href='https://github.com/pratikshitvas/SO-tag-prediction/blob/main/technolabs_tag_prediction.ipynb'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
                   </button>
