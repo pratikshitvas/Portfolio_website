@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#100c1d" />
+    <meta name="description" content="Compare editable downside, base, and upside scenarios for a personal stock and mutual fund portfolio." />
+    <title>Stock &amp; Mutual Fund Analyser — Pratikshit Vashistha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="analyser.css" />
+    <link rel="stylesheet" href="market-snapshot.css" />
+  </head>
+  <body class="analyser-page">
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="index.html" aria-label="Pratikshit Vashistha home"><span class="brand-mark">P<span>.</span></span><span class="brand-name">Pratikshit<br />Vashistha</span></a>
+        <nav class="desktop-nav" aria-label="Main navigation"><a href="index.html#work">Work</a><a href="#holdings">Holdings</a><a href="#forecast">Forecast</a></nav>
+        <a class="contact-pill" href="index.html">Back to portfolio <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <main id="top" class="analyser-shell">
+        <section class="analyser-intro">
+          <p class="eyebrow"><span class="status-dot"></span> PERSONAL FINANCE / SCENARIO PLANNER <span class="eyebrow-line"></span> INDIA</p>
+          <div class="intro-grid">
+            <div><h1>See your portfolio<br /><span class="serif-italic">from a few angles.</span></h1><p class="intro-copy">Add the stocks and mutual funds you’re tracking. Set your own return assumptions, then compare a downside, base, and upside path.</p></div>
+            <div class="model-note"><span class="note-mark">i</span><p><strong>Estimates, not predictions.</strong><br />This planner uses only the values and assumptions you enter. It does not fetch live quotes or recommend investments.</p></div>
+          </div>
+          <div class="date-line"><span>MODEL DATE</span><strong id="model-date">—</strong><span class="date-divider"></span><span>INR · NOMINAL VALUES</span></div>
+        </section>
+
+        <section class="market-snapshot" aria-labelledby="market-snapshot-title">
+          <div class="snapshot-heading"><div><p class="eyebrow">REFERENCE PRICES <span class="eyebrow-line"></span> MOST RECENT SESSION</p><h2 id="market-snapshot-title">Market snapshot</h2></div><span class="snapshot-date">FRIDAY · 23 OCTOBER 2026 CLOSE</span></div>
+          <div class="snapshot-grid">
+            <article class="snapshot-card"><div class="snapshot-card-top"><span class="snapshot-symbol">N50</span><span class="snapshot-kind">INDEX LEVEL</span></div><h3>NIFTY 50</h3><strong>22,600.00 <small>pts</small></strong><a href="https://markets.ft.markitdigital.com/data/indices/tearsheet/historical?s=NIFTY%3ANSI" target="_blank" rel="noreferrer">View closing data ↗</a></article>
+            <article class="snapshot-card snapshot-fund"><div class="snapshot-card-top"><span class="snapshot-symbol">MF</span><span class="snapshot-kind">DIRECT · GROWTH</span></div><h3>HDFC Nifty 50 Index Fund</h3><strong>₹221.2213 <small>/ unit</small></strong><a href="https://www.hdfcfund.com/nav-and-idcw" target="_blank" rel="noreferrer">View official NAV ↗</a></article>
+          </div>
+          <p class="snapshot-note">The index level is quoted in points; the fund figure is NAV per unit. These references are separate from your holdings and can become stale after the next market session.</p>
+        </section>
+
+        <section class="summary-grid" aria-label="Portfolio summary">
+          <article class="summary-card"><span class="summary-label">CURRENT VALUE</span><strong id="current-total">₹0</strong><small id="invested-caption">Add holdings to begin</small></article>
+          <article class="summary-card summary-card-accent"><span class="summary-label">BASE CASE · <span id="horizon-caption">3 YEARS</span></span><strong id="base-total">₹0</strong><small id="base-change">Uses your expected annual returns</small></article>
+          <article class="summary-card"><span class="summary-label">SCENARIO RANGE</span><strong id="range-total">₹0 — ₹0</strong><small>Downside to upside estimate</small></article>
+        </section>
+
+        <section id="holdings" class="holdings-panel">
+          <div class="panel-heading"><div><p class="eyebrow">01 <span class="eyebrow-line"></span> YOUR INPUTS</p><h2>Holdings &amp; assumptions</h2></div><button id="add-holding" class="button button-primary" type="button">Add holding <span>＋</span></button></div>
+          <p class="panel-hint">Use the current value and return assumptions you want to model. Values are saved in this browser only.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">ASSET</th><th scope="col">TYPE</th><th scope="col">INVESTED (₹)</th><th scope="col">VALUE NOW (₹)</th><th scope="col">EXPECTED / YR</th><th scope="col">RISK BAND</th><th scope="col"><span class="visually-hidden">Remove</span></th></tr></thead>
+              <tbody id="holding-rows"></tbody>
+            </table>
+            <div id="empty-state" class="empty-state"><span class="empty-orbit">＋</span><strong>Your list starts here.</strong><span>Add a stock or mutual fund, then adjust the assumptions to explore possible outcomes.</span><button id="empty-add" class="text-button" type="button">Add your first holding ↗</button></div>
+          </div>
+          <div class="holdings-footer"><span><i class="privacy-dot"></i> Your entries stay in this browser</span><button id="clear-holdings" class="quiet-button" type="button">Clear all</button></div>
+        </section>
+
+        <section id="forecast" class="forecast-section">
+          <div class="forecast-title"><div><p class="eyebrow">02 <span class="eyebrow-line"></span> POSSIBLE OUTCOMES</p><h2>One portfolio.<br /><span class="serif-italic">Three scenarios.</span></h2></div><label class="horizon-control" for="horizon"><span>TIME HORIZON</span><select id="horizon"><option value="1">1 year</option><option value="3" selected>3 years</option><option value="5">5 years</option><option value="10">10 years</option></select></label></div>
+          <div class="scenario-grid">
+            <article class="scenario-card scenario-down"><div class="scenario-top"><span class="scenario-icon">↘</span><span class="scenario-tag">LOWER RETURN PATH</span></div><h3>Downside</h3><strong id="downside-total">₹0</strong><p id="downside-caption">Lower than your expected return</p><div class="scenario-track"><span id="downside-bar"></span></div></article>
+            <article class="scenario-card scenario-base"><div class="scenario-top"><span class="scenario-icon">→</span><span class="scenario-tag">YOUR ASSUMPTIONS</span></div><h3>Base case</h3><strong id="scenario-base-total">₹0</strong><p>Compounds at the expected returns you entered</p><div class="scenario-track"><span id="base-bar"></span></div></article>
+            <article class="scenario-card scenario-up"><div class="scenario-top"><span class="scenario-icon">↗</span><span class="scenario-tag">HIGHER RETURN PATH</span></div><h3>Upside</h3><strong id="upside-total">₹0</strong><p id="upside-caption">Higher than your expected return</p><div class="scenario-track"><span id="upside-bar"></span></div></article>
+          </div>
+          <div class="forecast-footnote"><span>HOW TO READ THIS</span><p>Each scenario compounds today’s value annually. The risk band widens the downside and upside around your expected rate; it does not measure actual market risk. Taxes, fees, inflation, and contributions are not included.</p></div>
+        </section>
+
+        <section class="export-panel"><div><p class="eyebrow">03 <span class="eyebrow-line"></span> TAKE IT WITH YOU</p><h2>Keep your numbers handy.</h2><p>Copy a clean CSV row set to paste into a spreadsheet or your own portfolio tracker.</p></div><div class="export-actions"><button id="copy-portfolio" class="button button-primary" type="button">Copy portfolio rows <span>⧉</span></button><button id="download-csv" class="text-button" type="button">Download CSV ↓</button><span id="copy-feedback" class="copy-feedback" role="status" aria-live="polite"></span></div></section>
+      </main>
+      <footer class="footer section-wrap"><a class="brand" href="index.html"><span class="brand-mark">P<span>.</span></span><span class="brand-name">Pratikshit<br />Vashistha</span></a><span>BUILT FOR EXPLORING ASSUMPTIONS.</span><a href="#top">BACK TO TOP ↑</a><span>© 2026</span></footer>
+    </div>
+    <script src="analyser.js"></script>
+  </body>
+</html>
